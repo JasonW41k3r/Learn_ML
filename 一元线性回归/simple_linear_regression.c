@@ -38,6 +38,12 @@ int main(void)
         printf("Epoch %d: w = %.16lf, b = %.16lf\n", cnt, w, b);
     }
 
+    // 释放内存空间
+    free(x);
+    free(y);
+    free(y_bar);
+
+    return 0;
 }
 
 double* y_(double w, double b, double* x, int N)
