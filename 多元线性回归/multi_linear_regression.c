@@ -26,11 +26,13 @@ int main(void)
         scanf("%lf", &y_train[i]);
     }
 
-    // 初始化权重，偏置
+    // 初始化权重，偏置等训练参数
     double* w = calloc(N, sizeof(double));
     double b = 0;
     double alpha = 0.01;
     int batch_size = 7000;
+
+    // 开始训练
     for (int cnt = 0; cnt < batch_size; cnt++) {
         double* delta_w = calloc(N, sizeof(double));
         double delta_b = 0;
